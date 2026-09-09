@@ -1,0 +1,21 @@
+[PAGE 1]
+MINISTRY OF CHEMICALS AND FERTILIZERS
+DEPARTMENT OF FERTILIZERS - DBT OPERATIONAL DIRECTIVE 2025
+
+Section 3: Mandatory Aadhaar Authentication via POS
+1. No subsidized chemical fertilizer (Urea, DAP, MOP, NPK) shall be sold by any PACS, Cooperative Marketing Federation, or retail dealer without real-time biometric/Aadhaar authentication on the electronic Point of Sale (e-POS) terminal.
+2. The DBT subsidy is credited directly to manufacturing/importing companies only after the successful digital sale transaction is registered on the integrated Fertilizer Management System (iFMS).
+
+Section 5: Monthly Purchase Quotas and Landholding Checks
+A maximum purchase ceiling of 100 bags (50 kg each) of subsidized Urea per calendar month is enforced per individual farmer. Any purchase exceeding 100 bags requires prior written verification and countersignature from the Block Agricultural Officer (BAO) confirming genuine cropping acreage requirements.
+
+[PAGE 2]
+Section 8: Prohibition of Digital Surcharges
+No PACS or fertilizer distributor shall levy any convenience fee, swipe charge, or surcharge on farmers paying via UPI, RuPay cards, or AEPS. The retail price printed on the fertilizer bag is inclusive of all taxes and delivery charges.
+
+Section 10: Mandatory Issue of Printed Cash Receipt
+Every PACS salesperson must issue a computer-generated bilingual POS receipt to the purchaser. The receipt must clearly state:
+a) The Maximum Retail Price (MRP) paid by the farmer.
+b) The exact Central Government subsidy amount absorbed per bag (e.g., Rs. 2,150 per bag of Urea).
+c) Buyer Aadhaar last 4 digits and transaction reference number.
+Any refusal to issue a printed receipt shall attract immediate suspension of the retail license under the Fertilizer Control Order (FCO).

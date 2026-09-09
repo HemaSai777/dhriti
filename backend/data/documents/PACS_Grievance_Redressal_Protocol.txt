@@ -1,0 +1,38 @@
+[PAGE 2]
+COOPERATIVE GRIEVANCE REDRESSAL PROTOCOL & CITIZEN CHARTER
+NATIONAL FEDERATION OF COOPERATIVES & STATE DEPT OF COOPERATION
+
+Section 1: Establishment of Grievance Redressal Mechanism
+Every Primary Agricultural Credit Society (PACS) and District Central Cooperative Bank (DCCB) is mandated to establish an Internal Grievance Redressal Cell.
+The Secretary of the Society shall act as the First Nodal Grievance Officer, assisted by an elected member of the Managing Committee who is not an office-bearer.
+A dedicated complaint register must be displayed openly at the society counter, and all complaints received digitally or physically must be logged without exception.
+
+[PAGE 7]
+Section 3: Grievance Submission and Tracking System
+Clause 3.1: Lodging Complaints and Unique Identifier
+1. Any member or beneficiary farmer may register a grievance regarding:
+   a) Delay or arbitrary denial of crop insurance claims or documentation.
+   b) Irregularities in fertilizer/seed distribution or credit disbursement.
+   c) Non-issuance of share certificates or refusal of membership admission.
+   d) Unaccounted deductions from bank accounts or passbook discrepancy.
+2. Every grievance must be officially acknowledged within 3 working days with a timestamped receipt.
+3. A unique tracking identifier formatted as GRV-YYYY-XXXXX (e.g. GRV-2026-00101) shall be assigned and communicated to the complainant via SMS/digital receipt.
+
+[PAGE 14]
+Section 5: Resolution Timelines and Three-Tier Escalation Matrix
+Clause 5.2: Three-Tier Escalation Hierarchy
+Tier 1 — Society Level (PACS):
+The Society Nodal Officer must investigate and resolve the grievance within 15 calendar days from the date of receipt.
+
+Tier 2 — District Level (Deputy Registrar of Cooperative Societies):
+If the grievance is not resolved within 15 days, or if the complainant is dissatisfied with the decision of the Society, the matter shall be automatically or manually escalated to the District Deputy Registrar. The Deputy Registrar shall conduct a hearing and pass a reasoned speaking order within 30 calendar days.
+
+Tier 3 — State Level (Cooperative Ombudsman / Tribunal):
+In cases involving financial disputes exceeding Rs. 50,000 or allegations of systemic corruption, an appeal lies before the State Cooperative Ombudsman, whose binding order shall be issued within 45 days.
+
+[PAGE 22]
+Section 8: Accountability, Penalties, and Whistleblower Protection
+Where an officer of the Cooperative Society is found guilty of willful negligence, malicious suppression of insurance documents, or unreasonable delay beyond prescribed timelines:
+1. The Deputy Registrar may order compensatory damages up to Rs. 5,000 to be paid to the aggrieved farmer from the Society's administrative expense fund.
+2. The Society may recover such penalty directly from the defaulting employee's salary.
+3. Complainants filing bona fide grievances are protected against retaliatory denial of agricultural credit or inputs under Section 42 of the Cooperative Vigilance Regulations.

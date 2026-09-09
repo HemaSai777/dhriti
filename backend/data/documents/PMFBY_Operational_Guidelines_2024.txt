@@ -1,0 +1,49 @@
+[PAGE 1]
+MINISTRY OF AGRICULTURE AND FARMERS WELFARE
+PRADHAN MANTRI FASAL BIMA YOJANA (PMFBY)
+OPERATIONAL GUIDELINES - 2024 REVISION
+
+Section 1: Scheme Objectives and Coverage Scope
+The Pradhan Mantri Fasal Bima Yojana (PMFBY) aims at supporting sustainable production in agriculture sector by way of:
+a) Providing financial support to farmers suffering crop loss/damage arising out of unforeseen events.
+b) Stabilizing the income of farmers to ensure their continuance in farming.
+c) Encouraging farmers to adopt innovative and modern agricultural practices.
+d) Ensuring flow of credit to the agriculture sector.
+
+The scheme covers all Food & Oilseeds crops and Annual Commercial / Annual Horticultural crops for which past yield data based on Crop Cutting Experiments (CCEs) is available. All farmers including sharecroppers and tenant farmers growing the notified crops in the notified area are eligible for coverage.
+
+[PAGE 18]
+Section 4: Premium Rates and Subsidy Structure
+Clause 4.1: Maximum Premium Payable by Farmers
+The actuarial premium rate shall be subsidized jointly by the Central Government and State Governments. The maximum premium rate payable by the farmer shall be as follows:
+1. Kharif Season (All Food grain & Oilseeds crops): Maximum 2.0% of Sum Insured or Actuarial rate, whichever is less.
+2. Rabi Season (All Food grain & Oilseeds crops): Maximum 1.5% of Sum Insured or Actuarial rate, whichever is less.
+3. Annual Commercial and Annual Horticultural crops: Maximum 5.0% of Sum Insured or Actuarial rate, whichever is less.
+The balance premium beyond the farmer's share is paid by the Central and State Governments on a 50:50 sharing basis, except in North Eastern states where the sharing pattern is 90:10.
+
+[PAGE 24]
+Section 7: Mid-Season Adversity Relief
+Clause 7.2: Immediate Relief in Case of Natural Calamities
+In case of adverse seasonal conditions during the crop season such as severe drought, dry spells, unseasonal rains, or floods, where the expected yield during the season is likely to be less than 50% of the normal yield:
+a) Immediate on-account payment up to 25% of likely claims will be released to eligible farmers.
+b) The adversity must be notified by the State Government through a joint committee assessment comprising the District Agriculture Officer and Insurance Company representative within 7 days of occurrence.
+c) The on-account payment shall be adjusted against the final claim settlement upon completion of Crop Cutting Experiments.
+
+[PAGE 42]
+Section 11: Localized Calamities & Claim Settlement Procedure
+Clause 11.1: Loss Assessment for Localized Calamities
+Localized risks covered under the scheme are Hailstorm, Landslide, Inundation, Cloud burst, and Natural Fire due to lightning.
+Mandatory Claim Intimation Procedure:
+1. The insured farmer must notify the Insurance Company, Local Agriculture Department official, or PACS within 72 hours of the occurrence of the localized calamity.
+2. Intimation can be submitted via the National Crop Insurance Portal (NCIP), Crop Insurance Mobile App, or Toll-Free Kisan Call Centre (1800-180-1551).
+3. The intimation must contain the farmer's name, survey number, crop name, estimated percentage loss, and bank account details.
+4. An appointed loss assessor or surveyor must be deputed within 48 hours of intimation.
+5. The joint field assessment must be completed within 10 days, and the claim compensation must be credited directly to the farmer's Aadhaar-linked bank account (DBT) within 15 days of survey completion.
+
+[PAGE 50]
+Section 14: General Exclusions from Risk Coverage
+The insurance company shall not be liable for compensation under the following conditions:
+a) Losses arising from war, invasion, civil rebellion, or nuclear risks.
+b) Malicious damage, theft, or intentional destruction of harvested produce.
+c) Losses caused by preventable domestic or wild animal grazing, unless specifically notified by the State Government as an add-on cover.
+d) Post-harvest losses occurring beyond 14 days from harvesting, or losses to produce stored in godowns/threshing yards not left in cut and spread condition in the field.
