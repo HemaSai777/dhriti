@@ -12,43 +12,46 @@ def init_db():
     Base.metadata.create_all(bind=engine)
 
 def seed_demo_data():
-    db = SessionLocal()
     init_db()
 
     # 1. Ingest documents and build retrieval index
     print("[Seed] Ingesting documents...")
-    chunks = ingest_all_documents()
-    retriever.load_index()
+    try:
+        chunks = ingest_all_documents()
+        retriever.load_index()
+    except Exception as e:
+        print(f"[Seed] Warning during document ingestion: {e}")
+        chunks = []
 
-    # 2. Seed Document Metadata if empty
-    existing_docs = db.query(DocumentMetadata).count()
-    if existing_docs == 0:
+    db = SessionLocal()
+    try:
+        # 2. Seed Document Metadata if not already present
         docs_dir = settings.DOCUMENTS_DIR
         for f in docs_dir.glob("*.*"):
             if f.suffix.lower() in [".txt", ".pdf"]:
-                # Count chunks for this doc
-                doc_chunks = [c for c in chunks if c.get("source") == f.name]
-                max_page = max([c.get("page", 1) for c in doc_chunks], default=1)
-                
-                doc_record = DocumentMetadata(
-                    id=f.stem.upper().replace(" ", "_"),
-                    title=f.stem.replace("_", " "),
-                    filename=f.name,
-                    file_type=f.suffix.replace(".", "").upper(),
-                    pages=max_page,
-                    chunk_count=len(doc_chunks),
-                    source_department="Department of Agriculture & Cooperation, Govt of India",
-                    uploaded_at=datetime.datetime.utcnow()
-                )
-                db.add(doc_record)
+                # Unique ID incorporating extension to prevent collision between .pdf and .txt
+                doc_id = f"{f.stem.upper().replace(' ', '_')}_{f.suffix.replace('.', '').upper()}"
+                if not db.query(DocumentMetadata).filter_by(id=doc_id).first():
+                    doc_chunks = [c for c in chunks if c.get("source") == f.name]
+                    max_page = max([c.get("page", 1) for c in doc_chunks], default=1)
+                    doc_record = DocumentMetadata(
+                        id=doc_id,
+                        title=f.stem.replace("_", " "),
+                        filename=f.name,
+                        file_type=f.suffix.replace(".", "").upper(),
+                        pages=max_page,
+                        chunk_count=len(doc_chunks),
+                        source_department="Department of Agriculture & Cooperation, Govt of India",
+                        uploaded_at=datetime.datetime.utcnow()
+                    )
+                    db.add(doc_record)
         db.commit()
         print("[Seed] Populated DocumentMetadata records.")
-
-    # 3. Seed Demo Tickets if empty
-    existing_tickets = db.query(Ticket).count()
-    if existing_tickets == 0:
-        print("[Seed] Populating realistic demo Grievance Tickets for Officer Portal...")
-        sample_tickets = [
+        # 3. Seed Demo Tickets if empty
+        existing_tickets = db.query(Ticket).count()
+        if existing_tickets == 0:
+            print("[Seed] Populating realistic demo Grievance Tickets for Officer Portal...")
+            sample_tickets = [
             Ticket(
                 id="GRV-2026-00421",
                 user_id="farmer-suresh-88",
@@ -110,13 +113,17 @@ def seed_demo_data():
                 ]),
                 created_at=datetime.datetime.utcnow() - datetime.timedelta(days=2)
             )
-        ]
-        for t in sample_tickets:
-            db.add(t)
-        db.commit()
-        print(f"[Seed] Successfully seeded {len(sample_tickets)} sample tickets.")
-
-    db.close()
+            ]
+            for t in sample_tickets:
+                if not db.query(Ticket).filter_by(id=t.id).first():
+                    db.add(t)
+            db.commit()
+            print(f"[Seed] Successfully seeded {len(sample_tickets)} sample tickets.")
+    except Exception as e:
+        print(f"[Seed] Warning during database seeding: {e}")
+        db.rollback()
+    finally:
+        db.close()
     print("[Seed] Seed data initialization complete!")
 
 if __name__ == "__main__":

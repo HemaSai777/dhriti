@@ -32,7 +32,7 @@ def list_documents():
             source_name = f.name
             
             docs_info.append({
-                "id": f.stem.upper().replace(" ", "_"),
+                "id": f"{f.stem.upper().replace(' ', '_')}_{f.suffix.replace('.', '').upper()}",
                 "title": title,
                 "filename": source_name,
                 "file_type": f.suffix.replace(".", "").upper(),
