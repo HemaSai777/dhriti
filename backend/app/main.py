@@ -55,6 +55,36 @@ def health_check():
         "provider": settings.LLM_PROVIDER
     }
 
+# Check for production frontend build (for Render or unified full-stack hosting)
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from fastapi import HTTPException
+
+FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if FRONTEND_DIST.exists() and (FRONTEND_DIST / "index.html").exists():
+    assets_dir = FRONTEND_DIST / "assets"
+    if assets_dir.exists():
+        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str):
+        if full_path.startswith("api"):
+            raise HTTPException(status_code=404, detail="API route not found")
+        target = FRONTEND_DIST / full_path
+        if target.is_file():
+            return FileResponse(target)
+        return FileResponse(FRONTEND_DIST / "index.html")
+else:
+    @app.get("/")
+    def root():
+        return {
+            "service": "SAHAYA Backend Gateway",
+            "status": "ONLINE",
+            "health_check": "/api/health",
+            "docs": "/docs"
+        }
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

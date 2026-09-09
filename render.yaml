@@ -1,0 +1,26 @@
+services:
+  # SAHAYA Full-Stack Web Service
+  - type: web
+    name: sahaya
+    runtime: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: chmod +x ./render-build.sh && ./render-build.sh
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: LLM_PROVIDER
+        value: gemini
+      - key: LLM_MODEL
+        value: gemini-3.6-flash
+      - key: LLM_API_KEY
+        sync: false
+      - key: CONFIDENCE_THRESHOLD
+        value: '0.75'
+      - key: SENSITIVE_CONFIDENCE_THRESHOLD
+        value: '0.85'
+      - key: DATABASE_URL
+        value: sqlite:///./sahaya.db

@@ -26,7 +26,7 @@ def test_endpoints():
         "query": "What is the PMFBY claim settlement procedure and deadline?",
         "language": "en"
     }
-    r = requests.post(f"{BASE_URL}/chat", json=payload_supported)
+    r = requests.post(f"{BASE_URL}/chat", json=payload_supported, timeout=60)
     print(r.status_code)
     data = r.json()
     print("Status:", data.get("status"))
@@ -45,7 +45,7 @@ def test_endpoints():
         "query": "Can I get a loan waiver of 10 lakh rupees without land records under government scheme?",
         "language": "en"
     }
-    r = requests.post(f"{BASE_URL}/chat", json=payload_unsupported)
+    r = requests.post(f"{BASE_URL}/chat", json=payload_unsupported, timeout=60)
     print(r.status_code)
     data2 = r.json()
     print("Status:", data2.get("status"))
@@ -59,7 +59,7 @@ def test_endpoints():
 
     print("\n--- 6. Verifying Created Grievance Ticket in /tickets ---")
     ticket_id = data2.get("ticket_id")
-    r = requests.get(f"{BASE_URL}/tickets/{ticket_id}")
+    r = requests.get(f"{BASE_URL}/tickets/{ticket_id}", timeout=15)
     print(r.status_code, r.json()["id"], r.json()["status"])
     assert r.status_code == 200
     assert r.json()["id"] == ticket_id
@@ -67,7 +67,8 @@ def test_endpoints():
     print("\n--- 7. Testing Officer Status Resolution ---")
     r = requests.patch(
         f"{BASE_URL}/tickets/{ticket_id}",
-        json={"status": "UNDER_REVIEW", "officer_notes": "Assigned to Block Agriculture Officer for verification."}
+        json={"status": "UNDER_REVIEW", "officer_notes": "Assigned to Block Agriculture Officer for verification."},
+        timeout=15
     )
     print(r.status_code, r.json()["status"], "Notes:", r.json()["officer_notes"])
     assert r.status_code == 200

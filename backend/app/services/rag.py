@@ -148,7 +148,8 @@ async def call_llm(query: str, chunks: List[Dict[str, Any]]) -> Dict[str, Any]:
             prompt = format_evidence_prompt(query, chunks)
             response = model.generate_content(
                 prompt,
-                generation_config={"response_mime_type": "application/json"}
+                generation_config={"response_mime_type": "application/json"},
+                request_options={"timeout": 25.0}
             )
             raw_text = response.text.strip()
             if raw_text.startswith("```"):

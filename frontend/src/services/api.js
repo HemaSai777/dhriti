@@ -1,4 +1,9 @@
-const API_BASE = '/api';
+const envBase = import.meta.env.VITE_API_BASE_URL;
+let API_BASE = '/api';
+if (envBase) {
+  const trimmed = envBase.replace(/\/+$/, '');
+  API_BASE = trimmed.endsWith('/api') ? trimmed : `${trimmed}/api`;
+}
 
 export async function chatQuery(query, language = 'en', userId = 'citizen-demo') {
   const res = await fetch(`${API_BASE}/chat`, {
